@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth0 } from '../contexts/auth0-context';
 import styled from 'styled-components';
-import ManamedLogoBlack from '../images/logos/manamed-logo-black.svg';
-import ManamedLogoWhite from '../images/logos/manamed-logo-white.svg';
-import RubikLogo from '../images/logos/rubik-logo.svg';
-import RubikLogoWhite from '../images/logos/rubik-logo-white.svg';
+import RHMLogo from '../images/logos/rhm-logo.svg';
 import ProfileArea from './ProfileArea';
 
 interface TopbarProps {}
@@ -21,11 +18,7 @@ const Topbar: React.FC<TopbarProps> = () => {
   return (
     <Container>
       <Left>
-        {theme === 'light' ? (
-          <img src={RubikLogoWhite} />
-        ) : (
-          <img src={RubikLogoWhite} />
-        )}
+        <Logo>RHM</Logo>
       </Left>
       <Right>
         <ProfileArea />
@@ -53,7 +46,7 @@ const Name = styled.div`
 const Left = styled.div`
   border-right: 1px solid var(--neutralDark);
   width: 280px;
-  padding: 0.6rem 1.5rem;
+  padding-left: 1rem;
 
   img {
     height: 100%;
@@ -62,3 +55,9 @@ const Left = styled.div`
 `;
 
 const Right = styled.div``;
+
+const Logo = styled.div`
+  color: gray;
+  font-size: 50px;
+  line-height: 1;
+`;
