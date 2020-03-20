@@ -1,34 +1,32 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { useAuth0 } from '../contexts/auth0-context';
 
 interface ProfileAreaProps {}
 
-const ProfileArea: React.FC<ProfileAreaProps> = () => {
-  const { user, logout } = useAuth0();
-  const [menuOpen, setMenuOpen] = useState(false);
+// const ProfileArea: React.FC<ProfileAreaProps> = () => {
+//   const [menuOpen, setMenuOpen] = useState(false);
 
-  return (
-    <Container onClick={() => setMenuOpen(!menuOpen)}>
-      <Profile>
-        {user && user.name && <Name>{user.name}</Name>}
-        {user && user.picture && <Picture src={user.picture} />}
-      </Profile>
+//   return (
+//     <Container onClick={() => setMenuOpen(!menuOpen)}>
+//       <Profile>
+//         {user && user.name && <Name>{user.name}</Name>}
+//         {user && user.picture && <Picture src={user.picture} />}
+//       </Profile>
 
-      {menuOpen && (
-        <Dropdown>
-          <DropdownItem>
-            <DropdownItemButton onClick={() => logout()}>
-              Sign Out
-            </DropdownItemButton>
-          </DropdownItem>
-        </Dropdown>
-      )}
-    </Container>
-  );
-};
+//       {menuOpen && (
+//         <Dropdown>
+//           <DropdownItem>
+//             <DropdownItemButton onClick={() => logout()}>
+//               Sign Out
+//             </DropdownItemButton>
+//           </DropdownItem>
+//         </Dropdown>
+//       )}
+//     </Container>
+//   );
+// };
 
-export default ProfileArea;
+// export default ProfileArea;
 
 const Container = styled.div`
   height: 100%;

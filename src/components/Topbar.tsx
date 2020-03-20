@@ -1,28 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { useAuth0 } from '../contexts/auth0-context';
 import styled from 'styled-components';
 import RHMLogo from '../images/logos/rhm-logo.svg';
-import ProfileArea from './ProfileArea';
+// import ProfileArea from './ProfileArea';
 
 interface TopbarProps {}
 
 const Topbar: React.FC<TopbarProps> = () => {
-  const { user } = useAuth0();
   const [name, setName] = useState();
   const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
-    if (user) setName(user.name);
-  }, [user]);
 
   return (
     <Container>
       <Left>
         <Logo>RHM</Logo>
       </Left>
-      <Right>
-        <ProfileArea />
-      </Right>
+      <Right>{/* <ProfileArea /> */}</Right>
     </Container>
   );
 };
