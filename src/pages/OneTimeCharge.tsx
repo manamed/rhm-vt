@@ -12,7 +12,6 @@ import {
   Select
 } from '../components/ui';
 import { useForm } from 'react-hook-form';
-import { useAuth0 } from '../contexts/auth0-context';
 import { useElements, useStripe, CardElement } from '@stripe/react-stripe-js';
 import { useHistory } from 'react-router-dom';
 import SubmitButton from '../components/SubmitButton';
@@ -35,7 +34,6 @@ const OneTimeCharge: React.FC = () => {
   });
   const stripe = useStripe();
   const elements = useElements();
-  const { user } = useAuth0();
   const [serverError, setServerError] = useState<String | null>(null);
   const [cardElementValid, setCardElementValid] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -226,19 +224,20 @@ const OneTimeCharge: React.FC = () => {
 export default OneTimeCharge;
 
 const Wrapper = styled.div`
-  display: grid;
-  /* grid-template-columns: 600px 1fr; */
-  width: 100%;
-  gap: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 `;
 
 const cardElementOptions = {
   style: {
     base: {
       fontSize: '19px',
-      color: 'lightgray',
+      color: '#323130',
       '::placeholder': {
-        color: '#d3d3d34a'
+        color: 'lightgray',
+        backgroundColor: 'white'
       }
     },
     invalid: {
@@ -250,14 +249,15 @@ const cardElementOptions = {
 const GridContainer = styled.form`
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
-  grid-template-columns: 600px 600px;
   gap: 2.4rem;
+  max-width: 600px;
   width: 100%;
 
   .StripeElement {
     border: 1px solid var(--textPrimary);
     padding: 10.5px 1rem;
     height: 43.16px;
+    background: white;
   }
 
   .StripeElement--focus {

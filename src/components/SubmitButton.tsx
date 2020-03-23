@@ -25,7 +25,7 @@ export default SubmitButton;
 const Button = styled.button`
   margin-top: 22px;
   border: none;
-  color: #333333;
+  color: white;
   background: var(--themePrimary);
   height: 43px;
   position: relative;

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   padding: 1.8rem;
-  background-color: var(--neutralPrimary);
   width: 100%;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+    0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
 `;
 
 export const Fieldset = styled.fieldset`
@@ -33,8 +34,8 @@ export const Input = styled.input`
   font-size: 1.2rem;
   width: 100%;
   padding: 0.6rem 1rem;
-  border: 1px solid var(--textPrimary);
-  background: transparent;
+  border: none;
+  background: white;
   caret-color: var(--textPrimary);
   color: var(--textPrimary);
 
@@ -47,7 +48,7 @@ export const Input = styled.input`
 export const ErrorMessage = styled.p`
   margin: 0;
   margin-top: 5px;
-  color: var(--errorMessageColor);
+  color: var(--errorMessage);
   font-size: 0.8rem;
   font-weight: 600;
 `;
