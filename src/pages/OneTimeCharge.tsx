@@ -213,6 +213,10 @@ const OneTimeCharge: React.FC = () => {
             {serverError && <ErrorMessage>{serverError}</ErrorMessage>}
           </FormGrid>
         </Card>
+        <p>
+          For questions regarding invoicing and payment, please email
+          AR@riot.health.
+        </p>
       </GridContainer>
       {/* <RightSection>
         <FaCreditCard />
