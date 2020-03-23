@@ -1,5 +1,5 @@
 body {
-  background-color: var(--neutralLight);
+  background-color: var(--neutralLighter);
   color: var(--textPrimary);
   font-family: 'Segoe UI', 'Open Sans', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
