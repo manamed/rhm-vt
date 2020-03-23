@@ -253,6 +253,10 @@ const GridContainer = styled.form`
   max-width: 600px;
   width: 100%;
 
+  @media (max-width: 1000px) {
+    gap: 0;
+  }
+
   .StripeElement {
     border: 1px solid var(--textPrimary);
     padding: 10.5px 1rem;
